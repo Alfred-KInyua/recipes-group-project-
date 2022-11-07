@@ -6,13 +6,13 @@ default: &default
 development:
   <<: *default
   database: recipes_group_project__development
-  username: recipes_group_project_
+  username: postgres
   host: localhost
   port: 5432
 test:
   <<: *default
   database: recipes_group_project__test
-  username: recipes_group_project_
+  username: postgres
   host: localhost
   port: 5432
 
