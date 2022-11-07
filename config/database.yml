@@ -8,12 +8,14 @@ development:
   database: recipes_group_project__development
   username: postgres
   host: localhost
+  password: '0000'
   port: 5432
 test:
   <<: *default
   database: recipes_group_project__test
   username: postgres
   host: localhost
+  password: '0000'
   port: 5432
 
 production:
