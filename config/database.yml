@@ -9,6 +9,7 @@ development:
   username: recipes_group_project_
   host: localhost
   port: 5432
+  password: rooftop
 test:
   <<: *default
   database: recipes_group_project__test
