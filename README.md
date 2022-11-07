@@ -11,14 +11,14 @@ The Recipe app keeps track of all your recipes, and ingredients. It will allow y
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
 
-- Copy this link `https://github.com/ppmarq1/recipe-app.git`.
+- Copy this link `https://github.com/Alfred-KInyua/recipes-group-project-.git`.
 - Get the directory that you want to clone the repository.
 - Open the command prompt in this directory.
-- Write `https://github.com/ppmarq1/recipe-app.git`.
-- Go to the repository folder in your command prompt `cd recipe-app`.
+- Write `git clone https://github.com/Alfred-KInyua/recipes-group-project-.git`.
+- Go to the repository folder in your command prompt `cd recipes-group-project`.
 
 - Follow these steps to run the app:
-  - run `gem install`, then run `rails s`
+  - run `bundle`, then run `rails s`
 
 ## Authors
 
