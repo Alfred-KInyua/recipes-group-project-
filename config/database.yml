@@ -6,15 +6,16 @@ default: &default
 development:
   <<: *default
   database: recipes_group_project__development
-  username: recipes_group_project_
+  username: postgres
   host: localhost
+  password: '0000'
   port: 5432
-  password: rooftop
 test:
   <<: *default
   database: recipes_group_project__test
-  username: recipes_group_project_
+  username: postgres
   host: localhost
+  password: '0000'
   port: 5432
 
 production:
