@@ -1,9 +1,26 @@
+<div class="m-5 p-5">
 <h1>New food</h1>
-
-<%= render "form", food: @food %>
+<%= bootstrap_form_with(model: Food.new) do |f| %>
+  <div>
+    <%= f.text_field :name %>
+  </div>
+    <div>
+    <%= f.text_field :measurement_unit %>
+  </div>
+  <div>
+    <%= f.number_field :price %>
+  </div>
+  <div>
+    <%= f.number_field :quantity %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <br>
 
 <div>
   <%= link_to "Back to foods", foods_path %>
+</div>
 </div>
