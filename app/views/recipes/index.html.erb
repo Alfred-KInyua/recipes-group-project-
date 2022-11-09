@@ -1,14 +1,28 @@
+<div class="m-5 p-5">
 <p style="color: green"><%= notice %></p>
 
-<h1>Recipes</h1>
+<h1>Recipes Branch </h1>
 
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
-  <% end %>
-</div>
-
+<table class="table table-striped table-hover" data-toggle="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>preparation time</th>
+          <th>cooking time</th>
+          <th>description</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% @recipe.each do |rec| %>
+          <tr>
+            <td><%= rec.name %></td>
+            <td><%= rec.preparation_time %></td>
+            <td><%= rec.cooking_time %></td>
+            <td><%= rec.description %></td>
+             <td><%= button_to 'Delete', recipe_path(recipe.id), method: :delete %></td>
+          </tr>
+        <% end %>
+      </tbody>
+</table>
 <%= link_to "New recipe", new_recipe_path %>
+</div>
