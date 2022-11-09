@@ -12,14 +12,15 @@ class RecipesController < ApplicationController
 
   # GET /recipes/new
   def new
-    @recipe = Recipe.new
+    @user = User.find(current_user.id)
+    @recipe = Recipe.new    
   end
 
   # POST /recipes or /recipes.json
   def create
     @user = User.find(current_user.id)
-    #  @recipe = @user.recipes.new(recipe_params)
-    @recipe = Recipe.new(recipe_params)
+    @recipe = @user.recipes.new(recipe_params)
+    # @recipe = Recipe.new(recipe_params)
     if @recipe.save
       redirect_to recipes_path, notice: 'New recipe created successfully.'
     else

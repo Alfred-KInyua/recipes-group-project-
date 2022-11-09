@@ -1,9 +1,7 @@
 <div class="m-5 p-5">
 <h1>New recipe</h1>
 
-<%= render "form", recipe: @recipe %>
-
-<%= bootstrap_form_with(model: Recipe.new) do |r| %>
+<%= bootstrap_form_with(model: @user.recipes.new) do |r| %>
   <div>
     <%= r.text_field :name %>
   </div>
@@ -15,6 +13,9 @@
   </div>
   <div>
     <%= r.text_field :description %>
+  </div>
+  <div>
+    <%= r.submit %>
   </div>
 
 <% end %>

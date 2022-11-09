@@ -13,12 +13,12 @@
           </tr>
       </thead>
       <tbody>
-        <% @recipes.each do |rec| %>
+        <% @recipes.each do |recipe| %>
           <tr>
-            <td><%= rec.name %></td>
-            <td><%= rec.preparation_time %></td>
-            <td><%= rec.cooking_time %></td>
-            <td><%= rec.description %></td>
+            <td><%= recipe.name %></td>
+            <td><%= recipe.preparation_time %></td>
+            <td><%= recipe.cooking_time %></td>
+            <td><%= recipe.description %></td>
              <td><%= button_to 'Delete', recipe_path(recipe.id), method: :delete %></td>
           </tr>
         <% end %>
