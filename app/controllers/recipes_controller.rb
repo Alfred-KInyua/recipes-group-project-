@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   def new
     @user = User.find(current_user.id)
-    @recipe = Recipe.new    
+    @recipe = Recipe.new
   end
 
   # POST /recipes or /recipes.json
