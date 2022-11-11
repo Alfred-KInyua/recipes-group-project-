@@ -24,5 +24,10 @@
         <% end %>
       </tbody>
 </table>
-<%= link_to "New recipe", new_recipe_path %>
+<%= link_to "Detail recipe", new_recipe_path %>
+<% @recipes.each do |r|%>
+  <%= link_to recipe_path(r.id) do%>
+    <%= render r %>
+  <%end%>
+<%end%>
 </div>

@@ -1,16 +1,10 @@
+<p style="color: green"><%= notice %></p>
 
- <div>
- <p> <%= @recipe.name %> :name</p>
-  <p><%= @recipe.preparation_time %> :preparation time</p>
-  <P><%= @recipe.cooking_time %> :Cooking time</p>
-  <p><%= @recipe.description%>:Description</strong></p>
-  </div>
-  <hr>
-  <% if can? :manage, @recipe %>
-    <div>
-      <%= link_to "Generate shopping list", general_shopping_list_index_path, class: "btn btn-outline-primary" %>
-      <%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe.id) , class: "btn btn-outline-primary" %>
-    </div>
-  <% end %>
-<%= link_to "New recipe food" , new_recipe_recipe_food_path(@recipe.id) %>
+<%= render @recipe %>
+
+<div>
+  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
+  <%= link_to "Back to recipes", recipes_path %>
+
+  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
 </div>
