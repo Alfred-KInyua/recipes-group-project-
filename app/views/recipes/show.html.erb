@@ -1,33 +1,10 @@
-<div class="container">
-  <h1>
-  <%= @recipe.name %>
-  </h1>
-  <div>
-  <p>
-  <strong> Preparation time:<%= @recipe.preparation_time %>
-  </strong></p>
-  <P><strong>Cooking time:
-  <%= @recipe.cooking_time %>
-  </strong></p>
-  <p><strong><%= @recipe.description%></strong></p>
-  </div>
-  <hr>
-    <div class="d-flex my-4 mx-auto justify-content-between w-50">
-      <%= link_to "Generate shopping list", shopping_list_index_path, class: "btn btn-outline-primary" %>
-      <%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe.id) , class: "btn btn-outline-primary" %>
-    </div>
-  <hr>
-  <table class="table table-striped text-center">
-  <thead>
-    <tr>
-      <th>Food</th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <th>Action</th>
-    </tr>
-    </thead>
-    <% @recipe_foods.each do |recipe_food| %>
-      <%= render recipe_food %>
-    <% end %>
-  </table>
+<p style="color: green"><%= notice %></p>
+
+<%= render @recipe %>
+
+<div>
+  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
+  <%= link_to "Back to recipes", recipes_path %>
+
+  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
 </div>
