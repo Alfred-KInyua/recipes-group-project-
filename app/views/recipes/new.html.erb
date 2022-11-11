@@ -6,13 +6,16 @@
     <%= r.text_field :name %>
   </div>
     <div>
-    <%= r.time_field :preparation_time %> 
+    <%= r.time_field :preparation_time %>
   </div>
   <div>
     <%= r.time_field :cooking_time %>
   </div>
   <div>
     <%= r.text_field :description %>
+  </div>
+  <div>
+    <%= r.check_box :public, class: 'form-check-input', id: 'flexSwitchCheckDefault' %>
   </div>
   <div>
     <%= r.submit %>
