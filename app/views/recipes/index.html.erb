@@ -24,7 +24,7 @@
         <% end %>
       </tbody>
 </table>
-<%= link_to "Detail recipe", new_recipe_path %>
+<%= link_to "New Recipe", new_recipe_path %>
 <% @recipes.each do |det|%>
   <%= link_to recipe_path(det.id) do%>
     <%= render det %>
