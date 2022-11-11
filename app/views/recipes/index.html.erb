@@ -2,8 +2,5 @@
 
 <%= link_to "New Recipe", new_recipe_path %>
 <% @recipes.each do |det|%>
-  <%= link_to recipe_path(det.id) do%>
-    <%= render det %>
-  <%end%>
 <%end%>
 </div>
