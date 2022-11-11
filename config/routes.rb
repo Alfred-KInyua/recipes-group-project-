@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :general_shopping_lists
   devise_for :users
 
   resources :recipes, except: :update do
