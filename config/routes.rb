@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  root "foods#index"
 
   resources :recipes, except: :update do
     resources :recipe_foods, except: [:show, :update]
@@ -8,5 +9,5 @@ Rails.application.routes.draw do
   resources :foods, except: :update
   resources :public_recipes, only: [:index]
 
-  root "foods#index"
+
 end
