@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
   resources :foods, except: :update
   resources :public_recipes, only: [:index]
-
-
+  resources :shopping_list, only: [:index]
+  root "foods#index"
 end
