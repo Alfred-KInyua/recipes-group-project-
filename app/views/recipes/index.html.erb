@@ -1,0 +1,6 @@
+<div class="m-5 p-5">
+<p><%= link_to "Add New Recipe", new_recipe_path,class:"btn btn-info" %></p>
+<% @recipes.each do |recipe|%>
+    <%= render recipe %>
+<%end%>
+</div>
