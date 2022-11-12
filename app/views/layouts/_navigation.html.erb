@@ -3,6 +3,7 @@
   <h1 class="text-light">Recipe Group Project</h1>
   <% if current_user %>
     <%= link_to 'My Recipes', recipes_path, class: "me-1 text-primary" %>
+    <%= link_to 'Public Recipes', public_recipes_path %>
     <%= link_to "General Shopping List",shopping_list_index_path, class: "me-1" %>
     <%= link_to 'Food List', foods_path, class: "me-1 text-primary"%>
   <% end %>
